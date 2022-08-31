@@ -1,7 +1,7 @@
 
 import {
-    Typography
-
+    Typography,
+    Slide
 } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import Projeto from './Projeto';
@@ -22,15 +22,19 @@ function Projetos() {
                     {
                         data.projetos.map((p) => {
                             return (
-                                <Grid xs={11} md={5} spacing={1} sx={{ p: 3 }}>
-                                    <Projeto
-                                        titulo={p.titulo}
-                                        imagem={p.imagem}
-                                        descricao={p.descricao}
-                                        linkDemo={p.linkDemo}
-                                        linkGitHub={p.linkGitHub}
-                                    />
-                                </Grid>
+                                <Slide direction="up" in={true}>
+                                    <Grid xs={11} md={5} spacing={1} sx={{ p: 3 }}>
+                                        <Projeto
+                                            titulo={p.titulo}
+                                            imagem={p.imagem}
+                                            descricao={p.descricao}
+                                            linkDemo={p.linkDemo}
+                                            linkGitHub={p.linkGitHub}
+                                        />
+                                    </Grid>
+
+                                </Slide>
+
                             );
                         }
 

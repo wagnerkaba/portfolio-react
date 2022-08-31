@@ -30,7 +30,7 @@ export const data = {
             titulo: 'Portfólio',
             imagem: portfolio,
             descricao: 'Este portfólio foi criado em REACT e não poderia deixar de constar nesta lista como um dos meus projetos pessoais. Possui design responsivo.',
-            linkDemo: '',
+            linkDemo: 'https://wagnerkaba.netlify.app/',
             linkGitHub: 'https://github.com/wagnerkaba/portfolio-react'
         },
     ]
