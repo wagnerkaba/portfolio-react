@@ -40,7 +40,7 @@ const Projeto = ({titulo, imagem, descricao, linkDemo, linkGitHub }) => {
                     target={"_blank"}
                     rel={"noreferrer"}
                 >
-                    Repositório no Github
+                    Github
                 </Button>
             </CardActions>
         </Card>
