@@ -3,7 +3,8 @@ import {
     Chip,
     Typography,
     Stack,
-    Slide
+    Slide,
+    Link
 
 
 } from '@mui/material';
@@ -46,7 +47,13 @@ function Intro() {
                         <Typography variant="subtitle1">
                             Olá! Meu nome é Wagner Kaba e sou Desenvolvedor Web autodidata.
                             Utilizo Javascript e Java, além das tecnologias relacionadas, para desenvolver soluções para web.
-                            Nesta página você poderá conhecer meu portfolio e meu currículo.
+                            Nesta página você poderá conhecer meu portfolio e meu <Link 
+                                href="https://drive.google.com/file/d/10viw9fm8HbwCuUzYaYiGYwKcBUqrMCkQ/view" 
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                currículo
+                            </Link>.
                         </Typography>
                     </Grid>
                     <Grid>
