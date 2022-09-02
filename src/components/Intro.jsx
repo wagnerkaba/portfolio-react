@@ -9,16 +9,23 @@ import {
 
 } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
-import wagner from "../assets/images/wagner.jpg"
+import wagner from "../assets/images/wagner.jpg";
+
 function Intro() {
     return (
 
-        <Grid container display="flex" justifyContent="center" alignItems="center" sx={{ mt: 12 }}>
+        <Grid
+            container
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            sx={{ height: {md:"100vh"}}} // em display maiores que md, o componente Intro aparece ocupando a tela inteira
+        >
             {/* Nome e foto */}
-            <Slide direction="down" in={true} >
+            <Slide direction="down" in={true} timeout={1000}>
                 <Grid xs={11} md={5} spacing={1}>
 
-                    <Grid display="flex" justifyContent="center" alignItems="center">
+                    <Grid display="flex" justifyContent="center" alignItems="center" sx={{mt:3}}>
                         <Avatar alt="Wagner Kaba" src={wagner} sx={{ width: 200, height: 200 }} />
                     </Grid>
                     <Grid display="flex" justifyContent="center" alignItems="center">
@@ -36,7 +43,7 @@ function Intro() {
             </Slide>
 
             {/* Informações básicas */}
-            <Slide direction="left" in={true}>
+            <Slide direction="left" in={true} timeout={500}>
                 <Grid container xs={11} md={5} spacing={3} sx={{ mt: 3 }}>
                     <Grid>
                         <Typography variant="h3">
@@ -47,8 +54,8 @@ function Intro() {
                         <Typography variant="subtitle1">
                             Olá! Meu nome é Wagner Kaba e sou Desenvolvedor Web autodidata.
                             Utilizo Javascript e Java, além das tecnologias relacionadas, para desenvolver soluções para web.
-                            Nesta página você poderá conhecer meu portfolio e meu <Link 
-                                href="https://drive.google.com/file/d/10viw9fm8HbwCuUzYaYiGYwKcBUqrMCkQ/view" 
+                            Nesta página você poderá conhecer meu portfolio e meu <Link
+                                href="https://drive.google.com/file/d/10viw9fm8HbwCuUzYaYiGYwKcBUqrMCkQ/view"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -76,6 +83,8 @@ function Intro() {
                 </Grid>
             </Slide>
         </Grid>
+
+
 
     );
 }

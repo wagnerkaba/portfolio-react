@@ -10,9 +10,9 @@ import { data } from '../data';
 function Projetos() {
     return (
         <>
-            <Grid sx={{ mt: 20, backgroundColor: 'info.light' }}>
+            <Grid sx={{ backgroundColor: 'info.light' }}>
 
-                <Grid xs={12} display="flex" justifyContent="center" alignItems="center" sx={{ pt: 8, pb: 3 }}>
+                <Grid xs={12} display="flex" justifyContent="center" alignItems="center" sx={{ mt:3, pt: 8, pb: 3 }}>
                     <Typography variant="h2">
                         <strong>Portfólio</strong>
                     </Typography>
@@ -22,7 +22,7 @@ function Projetos() {
                     {
                         data.projetos.map((p) => {
                             return (
-                                <Slide direction="up" in={true}>
+                                <Slide direction="up" in={true} key={p.titulo}>
                                     <Grid xs={11} md={5} spacing={1} sx={{ p: 3 }}>
                                         <Projeto
                                             titulo={p.titulo}
