@@ -1,6 +1,5 @@
 import {
-  CssBaseline,
-  createTheme 
+  CssBaseline
 } from '@mui/material';
 import Footer from './components/Footer';
 import Intro from './components/Intro';
