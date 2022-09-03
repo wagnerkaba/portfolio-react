@@ -4,7 +4,11 @@ import SpeedDialAction from '@mui/material/SpeedDialAction';
 import MenuIcon from '@mui/icons-material/Menu';
 import FolderSpecialIcon from '@mui/icons-material/FolderSpecial';
 import ArticleIcon from '@mui/icons-material/Article';
-import { Link } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import {
+    Link,
+    SpeedDialIcon
+} from '@mui/material';
 
 
 const actions = [
@@ -25,7 +29,12 @@ function BasicSpeedDial() {
             ariaLabel="Menu de navegação"
             direction='down'
             sx={{ position: 'absolute', top: 16, right: 16 }}
-            icon={<MenuIcon />}
+            icon={
+                <SpeedDialIcon 
+                    icon={<MenuIcon/>}
+                    openIcon={<CloseIcon/>}
+                />
+            }
         >
             {actions.map((action) => (
                 <SpeedDialAction
