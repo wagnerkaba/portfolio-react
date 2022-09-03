@@ -1,37 +1,42 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import SpeedDial from '@mui/material/SpeedDial';
-import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
-import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
-import SaveIcon from '@mui/icons-material/Save';
-import PrintIcon from '@mui/icons-material/Print';
-import ShareIcon from '@mui/icons-material/Share';
+import MenuIcon from '@mui/icons-material/Menu';
+import FolderSpecialIcon from '@mui/icons-material/FolderSpecial';
+import ArticleIcon from '@mui/icons-material/Article';
+import { Link } from '@mui/material';
+
 
 const actions = [
-  { icon: <FileCopyIcon />, name: 'Copy' },
-  { icon: <SaveIcon />, name: 'Save' },
-  { icon: <PrintIcon />, name: 'Print' },
-  { icon: <ShareIcon />, name: 'Share' },
+    { icon: <Link href="#portfolio"><FolderSpecialIcon /></Link>, name: 'Portfólio' },
+    {
+        icon: <Link
+            href="https://drive.google.com/file/d/10viw9fm8HbwCuUzYaYiGYwKcBUqrMCkQ/view"
+            target="_blank"
+            rel="noreferrer"
+        ><ArticleIcon /></Link>, name: 'Currículo'
+    },
+
 ];
 
 function BasicSpeedDial() {
-  return (
-      <SpeedDial
-        ariaLabel="SpeedDial de navegação"
-        direction='up'
-        sx={{ position: 'absolute', bottom: 16, right: 16 }}
-        icon={<SpeedDialIcon />}
-      >
-        {actions.map((action) => (
-          <SpeedDialAction
-            key={action.name}
-            icon={action.icon}
-            tooltipTitle={action.name}
-          />
-        ))}
-      </SpeedDial>
-  );
+    return (
+        <SpeedDial
+            ariaLabel="Menu de navegação"
+            direction='down'
+            sx={{ position: 'absolute', top: 16, right: 16 }}
+            icon={<MenuIcon />}
+        >
+            {actions.map((action) => (
+                <SpeedDialAction
+                    key={action.name}
+                    icon={action.icon}
+                    tooltipTitle={action.name}
+                    tooltipOpen
+                />
+            ))}
+        </SpeedDial>
+    );
 }
 
 export default BasicSpeedDial;

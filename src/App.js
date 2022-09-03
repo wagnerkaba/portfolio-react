@@ -1,27 +1,33 @@
 import {
-  CssBaseline
+  CssBaseline,
+  ThemeProvider, 
+  createTheme 
 } from '@mui/material';
 import Footer from './components/Footer';
 import Intro from './components/Intro';
 import Projetos from './components/Projetos';
 import SpeedDial from './components/SpeedDial';
-import Menu from './components/Menu';
 
-
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 function App() {
   return (
     <>
+    {/* <ThemeProvider theme={darkTheme}> */}
       <CssBaseline />
-      {/* <Menu/> */}
-      {/* <SpeedDial /> */}
+      <SpeedDial />
       <Intro />
 
       <Projetos />
       <Footer />
 
 
-    </>
+      {/* </ThemeProvider> */}
+      </>
   );
 }
 

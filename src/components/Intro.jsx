@@ -24,7 +24,6 @@ function Intro() {
             {/* Nome e foto */}
             <Slide direction="down" in={true} timeout={1000}>
                 <Grid xs={11} md={5} spacing={1}>
-
                     <Grid display="flex" justifyContent="center" alignItems="center" sx={{mt:3}}>
                         <Avatar alt="Wagner Kaba" src={wagner} sx={{ width: 200, height: 200 }} />
                     </Grid>
