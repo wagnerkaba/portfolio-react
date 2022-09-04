@@ -1,23 +1,17 @@
 import {
   CssBaseline
 } from '@mui/material';
-import Footer from './components/Footer';
-import Intro from './components/Intro';
-import Projetos from './components/Projetos';
-import SpeedDial from './components/SpeedDial';
+import Home from './components/Home';
+import { ProvideChangeTheme } from './components/ChangeTheme';
+
 
 function App() {
+
   return (
-    <>
+    <ProvideChangeTheme >
       <CssBaseline />
-      <SpeedDial />
-      <Intro />
-
-      <Projetos />
-      <Footer />
-
-
-      </>
+      <Home />
+    </ProvideChangeTheme>
   );
 }
 

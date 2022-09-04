@@ -1,16 +1,21 @@
 
 import {
     Typography,
-    Slide
+    Slide,
+    useTheme
 } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import Projeto from './Projeto';
 import { data } from '../data';
 
 function Projetos() {
+    const theme = useTheme();
+    let bgColor = theme.palette.mode === 'dark' ? 'background.default' : 'info.light';
+
+
     return (
         <>
-            <Grid id="portfolio" sx={{ backgroundColor: 'info.light' }}>
+            <Grid id="portfolio" sx={{ backgroundColor: bgColor}}>
 
                 <Grid xs={12} display="flex" justifyContent="center" alignItems="center" sx={{ mt:3, pt: 8, pb: 3 }}>
                     <Typography variant="h2">

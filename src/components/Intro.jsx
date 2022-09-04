@@ -4,7 +4,8 @@ import {
     Typography,
     Stack,
     Slide,
-    Link
+    Link,
+    useTheme
 
 
 } from '@mui/material';
@@ -12,6 +13,8 @@ import Grid from '@mui/material/Unstable_Grid2';
 import wagner from "../assets/images/wagner.jpg";
 
 function Intro() {
+    const theme = useTheme();
+    let bgColor = theme.palette.mode === 'dark' ? 'divider' : 'background.default';
     return (
 
         <Grid
@@ -19,12 +22,15 @@ function Intro() {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            sx={{ height: {md:"100vh"}}} // em display maiores que md, o componente Intro aparece ocupando a tela inteira
+            sx={{
+                height: { md: "100vh" }, // em display maiores que md, o componente Intro aparece ocupando a tela inteira
+                backgroundColor: bgColor
+            }}
         >
             {/* Nome e foto */}
             <Slide direction="down" in={true} timeout={1000}>
                 <Grid xs={11} md={5} spacing={1}>
-                    <Grid display="flex" justifyContent="center" alignItems="center" sx={{mt:3}}>
+                    <Grid display="flex" justifyContent="center" alignItems="center" sx={{ mt: 3 }}>
                         <Avatar alt="Wagner Kaba" src={wagner} sx={{ width: 200, height: 200 }} />
                     </Grid>
                     <Grid display="flex" justifyContent="center" alignItems="center">

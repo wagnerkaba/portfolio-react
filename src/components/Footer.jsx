@@ -1,9 +1,14 @@
 import Grid from '@mui/material/Unstable_Grid2';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { Link } from '@mui/material';
+import { 
+    Link,
+    useTheme
+ } from '@mui/material';
 
 function Footer() {
+    const theme = useTheme();
+    let bgColor = theme.palette.mode === 'dark' ? 'background.default' : 'info.light';
     return (
         <>
             <Grid
@@ -11,7 +16,7 @@ function Footer() {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                sx={{ height: 60, backgroundColor: 'info.light' }}
+                sx={{ height: 100, backgroundColor: bgColor }}
                 spacing={2}
             >
                 <Grid>
