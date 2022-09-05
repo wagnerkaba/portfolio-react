@@ -20,11 +20,12 @@ const Projeto = ({ titulo, imagem, descricao, linkDemo, linkGitHub }) => {
 
     return (
         <VisibilitySensor
-            onChange={(partialVisibility) => {
-                if (partialVisibility) {
+            onChange={(isVisible) => {
+                if (isVisible) {
                     setActive(true);
                 }
             }}
+            partialVisibility={true}
         >
             <div>
                 <Slide direction='right' in={active} timeout={1000}>
