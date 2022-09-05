@@ -1,10 +1,10 @@
 import Grid from '@mui/material/Unstable_Grid2';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { 
+import {
     Link,
     useTheme
- } from '@mui/material';
+} from '@mui/material';
 
 function Footer() {
     const theme = useTheme();
@@ -17,29 +17,34 @@ function Footer() {
                 justifyContent="center"
                 alignItems="center"
                 sx={{ height: 100, backgroundColor: bgColor }}
-                spacing={2}
             >
-                <Grid>
-                    <Link
-                        href="https://github.com/wagnerkaba"
-                        target="_blank"
-                        rel="noreferrer"
-                        color="inherit"
-                    >
-                        <GitHubIcon fontSize={'large'} />
-                    </Link>
-                </Grid>
-                <Grid>
-                    <Link
-                        href="https://www.linkedin.com/in/wagnerk-profile/"
-                        target="_blank"
-                        rel="noreferrer"
-                        color="inherit"
-                    >
-                        <LinkedInIcon fontSize={'large'} />
-                    </Link>
 
-                </Grid>
+                <Link
+                    href="https://github.com/wagnerkaba"
+                    target="_blank"
+                    rel="noreferrer"
+                    color="inherit"
+                >
+                    <GitHubIcon
+                        fontSize={'large'}
+                        sx={{ mr: 1 }}
+
+                    />
+                </Link>
+
+                <Link
+                    href="https://www.linkedin.com/in/wagnerk-profile/"
+                    target="_blank"
+                    rel="noreferrer"
+                    color="inherit"
+                >
+                    <LinkedInIcon
+                        fontSize={'large'}
+                        sx={{ ml: 1 }}
+
+                    />
+                </Link>
+
             </Grid>
         </>
     );
