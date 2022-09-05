@@ -34,13 +34,23 @@ function Intro() {
                         <Avatar alt="Wagner Kaba" src={wagner} sx={{ width: 200, height: 200 }} />
                     </Grid>
                     <Grid display="flex" justifyContent="center" alignItems="center">
-                        <Typography variant="h1">
-                            <strong>Wagner</strong>
+                        <Typography sx={{
+                            fontSize: { xs: 'h2.fontSize', md: 'h1.fontSize' },
+                            lineHeight: { xs: 1, md: 'normal' },
+                            fontWeight: { xs: 900, md: 700 }
+                        }}
+                        >
+                            Wagner
                         </Typography>
                     </Grid>
                     <Grid display="flex" justifyContent="center" alignItems="center">
-                        <Typography variant="h1">
-                            <strong>Kaba</strong>
+                        <Typography sx={{
+                            fontSize: { xs: 'h2.fontSize', md: 'h1.fontSize' },
+                            lineHeight: { xs: 1, md: 'normal' },
+                            fontWeight: { xs: 900, md: 700 }
+                        }}
+                        >
+                            Kaba
                         </Typography>
                     </Grid>
 
@@ -51,7 +61,11 @@ function Intro() {
             <Slide direction="left" in={true} timeout={500}>
                 <Grid container xs={11} md={5} spacing={3} sx={{ mt: 3 }}>
                     <Grid>
-                        <Typography variant="h3">
+                        <Typography sx={{
+                            fontSize: { xs: 'h4.fontSize', md: 'h3.fontSize' },
+                            lineHeight: { xs: 1, md: 'normal' }
+                        }}
+                        >
                             <strong>Fullstack Web Developer</strong>
                         </Typography>
                     </Grid>
