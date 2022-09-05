@@ -23,7 +23,6 @@ function Projetos() {
             <Grid xs={12} display="flex" justifyContent="center" alignItems="center" sx={{ mt: 3, pt: 8, pb: 3 }}>
                 <VisibilitySensor
                     onChange={(isVisible) => {
-                        console.log(isVisible);
                         if (isVisible) {
                             setActive(true);
                         }
