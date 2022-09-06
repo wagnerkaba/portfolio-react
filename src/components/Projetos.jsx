@@ -8,7 +8,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Projeto from './Projeto';
 import { data } from '../data';
 import * as React from 'react';
-import VisibilitySensor from 'react-visibility-sensor';
+import VisibilitySensor from 'react-visibility-sensor-v2';
 
 function Projetos() {
     const theme = useTheme();

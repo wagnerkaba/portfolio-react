@@ -8,7 +8,7 @@ import {
     Typography,
     Slide
 } from '@mui/material';
-import VisibilitySensor from 'react-visibility-sensor';
+import VisibilitySensor from "react-visibility-sensor-v2";
 
 
 

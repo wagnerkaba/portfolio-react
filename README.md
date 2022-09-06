@@ -10,3 +10,4 @@ Visite: [https://wagnerkaba.netlify.app/](https://wagnerkaba.netlify.app/)
 * REACT
 * Javascript
 * Material UI
+* React Visibility Sensor
