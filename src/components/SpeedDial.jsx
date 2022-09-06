@@ -11,7 +11,8 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import {
     Link,
     SpeedDialIcon,
-    useTheme
+    useTheme,
+    Slide
 } from '@mui/material';
 import { useChangeTheme } from './ChangeTheme';
 
@@ -49,7 +50,7 @@ function BasicSpeedDial() {
         },
         {
             icon:
-                <Link  sx={{ mt: 1 }}onClick={colorMode.toggleColorMode} color="inherit">
+                <Link sx={{ mt: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
                     {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
                 </Link>,
             name: corTema
@@ -60,26 +61,28 @@ function BasicSpeedDial() {
 
 
     return (
-        <SpeedDial
-            ariaLabel="Menu de navegação"
-            direction='down'
-            sx={{ position: 'absolute', top: 16, right: 16 }}
-            icon={
-                <SpeedDialIcon
-                    icon={<MenuIcon />}
-                    openIcon={<CloseIcon />}
-                />
-            }
-        >
-            {actions.map((action) => (
-                <SpeedDialAction
-                    key={action.name}
-                    icon={action.icon}
-                    tooltipTitle={action.name}
-                    tooltipOpen
-                />
-            ))}
-        </SpeedDial>
+        <Slide direction="right" in={true} timeout={2000}>
+            <SpeedDial
+                ariaLabel="Menu de navegação"
+                direction='down'
+                sx={{ position: 'absolute', top: 16, right: 16 }}
+                icon={
+                    <SpeedDialIcon
+                        icon={<MenuIcon />}
+                        openIcon={<CloseIcon />}
+                    />
+                }
+            >
+                {actions.map((action) => (
+                    <SpeedDialAction
+                        key={action.name}
+                        icon={action.icon}
+                        tooltipTitle={action.name}
+                        tooltipOpen
+                    />
+                ))}
+            </SpeedDial>
+        </Slide>
     );
 }
 
