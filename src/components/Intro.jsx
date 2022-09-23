@@ -74,7 +74,7 @@ function Intro() {
                             Olá! Meu nome é Wagner Kaba e sou Desenvolvedor Web autodidata.
                             Utilizo Javascript e Java, além das tecnologias relacionadas, para desenvolver soluções para web.
                             Nesta página você poderá conhecer meu portfolio e meu <Link
-                                href="https://drive.google.com/file/d/16iU-uMIcWSe3SfDYBipVW-kUhufC9h_g/view?usp=sharing"
+                                href={process.env.REACT_APP_LINK_CURRICULO} //variavel de ambiente salva no arquivo .env
                                 target="_blank"
                                 rel="noreferrer"
                             >

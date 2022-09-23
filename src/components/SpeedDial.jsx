@@ -39,7 +39,7 @@ function BasicSpeedDial() {
             icon:
                 <Link
                     sx={{ mt: 1 }}
-                    href="https://drive.google.com/file/d/16iU-uMIcWSe3SfDYBipVW-kUhufC9h_g/view?usp=sharing"
+                    href={process.env.REACT_APP_LINK_CURRICULO} //variavel de ambiente salva no arquivo .env
                     target="_blank"
                     rel="noreferrer"
                     color="inherit"
